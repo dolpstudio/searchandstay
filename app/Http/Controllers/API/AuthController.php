@@ -86,6 +86,9 @@ class AuthController extends Controller
     public function logout(Request $request): JsonResponse
     {
 
+        // Revoke all tokens...
+        auth()->user()->tokens()->delete();
+
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
