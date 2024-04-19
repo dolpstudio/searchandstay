@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Store extends Model
 {
@@ -21,6 +21,9 @@ class Store extends Model
         'active',
     ];
 
+
+    protected $hidden = ['pivot'];
+
     /**
      * The attributes that should be cast.
      *
@@ -33,8 +36,8 @@ class Store extends Model
     /**
      * Get the Books for the Store.
      */
-    public function Book(): HasMany
+    public function book(): BelongsToMany
     {
-        return $this->hasMany(Book::class);
+        return $this->belongsToMany(Book::class);
     }
 }

@@ -21,6 +21,7 @@ class StoreResource extends JsonResource
             'name' => $this->name,
             'address' => $this->address,
             'active' => (bool) $this->active,
+            'books' => $this->book,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
