@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
-// use App\Http\Controllers\API\StoreController;
+use App\Http\Controllers\API\StoreController;
 use App\Http\Controllers\API\BookController;
 
 /*
@@ -30,4 +30,4 @@ Route::controller(AuthController::class)->group(function () {
 
 
 Route::apiResource('books', BookController::class);
-// Route::apiResource('stores', StoreController::class);
+Route::apiResource('stores', StoreController::class);
