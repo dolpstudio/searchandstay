@@ -11,7 +11,7 @@
 
 ### Postman API tests
 
-1. Import in Postman
+1. Import the collection in Postman `Search-and-Stay.postman_collection.json`
 2. Configure, if necessary, in the collection, the variable "API_URL" current value (http://127.0.0.1:8000/api)  
 3. Register user in `Auth Register`
 4. Insert book in `Books/Book add`
