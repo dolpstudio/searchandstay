@@ -21,7 +21,6 @@ class Store extends Model
         'active',
     ];
 
-
     protected $hidden = ['pivot'];
 
     /**

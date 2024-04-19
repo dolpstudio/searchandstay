@@ -28,6 +28,3 @@ class BookRequest extends FormRequest
         ];
     }
 }
-
-
-

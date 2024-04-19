@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Http\JsonResponse;
-use App\Models\Store;
 use App\Http\Requests\StoreRequest;
 use App\Http\Resources\StoreCollection;
 use App\Http\Resources\StoreResource;
-
+use App\Models\Store;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class StoreController extends Controller
 {

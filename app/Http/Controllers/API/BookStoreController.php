@@ -3,12 +3,10 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use Illuminate\Http\JsonResponse;
 use App\Models\Book;
 use App\Models\Store;
-use App\Http\Resources\BookCollection;
-
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class BookStoreController extends Controller
 {
@@ -21,7 +19,6 @@ class BookStoreController extends Controller
         $this->middleware('auth:sanctum');
     }
 
-
     /**
      * Store a newly created resource in storage.
      */
@@ -29,13 +26,12 @@ class BookStoreController extends Controller
     {
 
         $store->book()->syncWithoutDetaching($book->id);
-        
+
         return response()->json([
             'message' => 'BookStore relationship created successfully',
         ]);
 
     }
-
 
     /**
      * Remove the specified resource from storage.

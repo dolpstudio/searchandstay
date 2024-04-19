@@ -26,7 +26,7 @@ class AuthController extends Controller
     /**
      * User register
      *
-     * @param $request  AuthRegisterRequest
+     * @param  $request  AuthRegisterRequest
      */
     public function register(AuthRegisterRequest $request): JsonResponse
     {
@@ -36,7 +36,7 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-    
+
         return response()->json([
             'message' => 'User created successfully',
             'user' => new UserResource($user),
@@ -46,7 +46,7 @@ class AuthController extends Controller
     /**
      * User login
      *
-     * @param $request  AuthLoginRequest
+     * @param  $request  AuthLoginRequest
      */
     public function login(AuthLoginRequest $request): JsonResponse
     {
