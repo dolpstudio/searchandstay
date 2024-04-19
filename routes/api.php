@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\StoreController;
 use App\Http\Controllers\API\BookController;
+use App\Http\Controllers\API\BookStoreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,7 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::apiResource('books', BookController::class);
 Route::apiResource('stores', StoreController::class);
+Route::controller(BookStoreController::class)->prefix('bookstore')->group(function () {
+    Route::post('/{book}/{store}', 'store');
+    Route::delete('/{book}/{store}', 'destroy');
+});
