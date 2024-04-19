@@ -22,7 +22,7 @@ class BookRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:191',
+            'name' => 'required|string|max:255',
             'isbn' => 'required|integer|digits:13',
             'bookvalue' => 'required|regex:/^\d+(\.\d{1,2})?$/|min:0',
         ];

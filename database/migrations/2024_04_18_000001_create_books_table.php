@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('user_id');
-            $table->unsignedInteger('store_id');
+            $table->unsignedInteger('store_id')->nullable();
             $table->string('name')->require();
-            $table->unsignedInteger('isbn');
+            $table->unsignedBigInteger('isbn');
             $table->unsignedDecimal('bookvalue', 8, 2);
             $table->timestamps();
 
