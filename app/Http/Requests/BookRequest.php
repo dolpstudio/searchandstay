@@ -23,7 +23,7 @@ class BookRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:191',
-            'isbn' => 'required|integer|size:13',
+            'isbn' => 'required|integer|digits:13',
             'bookvalue' => 'required|regex:/^\d+(\.\d{1,2})?$/|min:0',
         ];
     }

@@ -44,7 +44,7 @@ class BookController extends Controller
 
         return response()->json([
             'message' => 'Book created successfully',
-            'expense' => new BookResource($book),
+            'book' => new BookResource($book),
         ]);
 
     }
@@ -55,7 +55,7 @@ class BookController extends Controller
     public function show(Book $book, Request $request): JsonResponse
     {
         return response()->json([
-            'expense' => new BookResource($book),
+            'book' => new BookResource($book),
         ], 200);
     }
 
@@ -70,7 +70,7 @@ class BookController extends Controller
 
         return response()->json([
             'message' => 'Book updated successfully',
-            'expense' => new BookResource($book),
+            'book' => new BookResource($book),
         ], 200);
     }
 
